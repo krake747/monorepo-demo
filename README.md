@@ -18,3 +18,11 @@ mkdir apps packages
 
 - apps folder: Contains the main applications.
 - packages folder: Contains shared libraries or components.
+
+Create a `pnpm-workspace.yaml` file to define the workspace structure:
+
+```yaml
+packages:
+  - 'apps/*'
+  - 'packages/*'
+```
