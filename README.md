@@ -26,3 +26,10 @@ packages:
   - 'apps/*'
   - 'packages/*'
 ```
+
+Create a sample application in the `apps` folder:
+
+```bash
+// Astro app called curved-chaos
+pnpm create astro@latest --add react
+```
