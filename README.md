@@ -27,9 +27,14 @@ packages:
   - 'packages/*'
 ```
 
-Create a sample application in the `apps` folder:
+Create two sample applications in the `apps` folder:
 
 ```bash
 // Astro app called curved-chaos
 pnpm create astro@latest --add react
+```
+
+```bash
+// Vite React app called linear-dream
+pnpm create Vite
 ```
