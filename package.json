@@ -8,6 +8,7 @@
     "packageManager": "pnpm@10.24.0",
     "scripts": {
         "dev": "pnpm --filter linear-dream dev",
-        "dev:astro": "pnpm --filter curved-chaos dev"
+        "dev:astro": "pnpm --filter curved-chaos dev",
+        "test:all": "pnpm -r test"
     }
 }
