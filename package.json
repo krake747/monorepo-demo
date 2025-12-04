@@ -9,6 +9,16 @@
     "scripts": {
         "dev": "pnpm --filter linear-dream dev",
         "dev:astro": "pnpm --filter curved-chaos dev",
+        "build": "pnpm build:packages && pnpm build:apps",
+        "build:packages": "pnpm -r --filter ./packages/** build",
+        "build:apps": "pnpm -r --filter ./apps/** build",
+        "dev:all": "pnpm -r --parallel dev",
+        "build:all": "pnpm -r --parallel build",
         "test:all": "pnpm -r test"
+    },
+    "pnpm": {
+        "overrides": {
+            "vite": "8.0.0-beta.0"
+        }
     }
 }

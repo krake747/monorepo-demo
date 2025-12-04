@@ -56,7 +56,6 @@ Create two new shared packages in the `packages` folder:
 mkdir packages/core
 cd packages/core
 pnpm init
-
 pnpm i -D typescript --filter core
 pnpm exec tsc --init
 pnpm install -D vitest --filter core
@@ -64,3 +63,25 @@ pnpm install -D vitest --filter core
 
 We add a simple utility function in `packages/core/src/math.ts` and a test to `packages/core/src/math.spec.ts`.
 
+We add `tsconfig.json` for `packages/core` to add `"outDir": "dist"`.
+We update the `package.json` with a build script and pointing to `"main": "dist/index.js"` and 
+name the package `@mono/core`.
+
+Afterwards we add the package to the `linear-dream` app:
+
+```bash
+pnpm add @mono/core --filter linear-dream --workspace
+```
+
+We now update the root `package.json` with extra scripts.
+
+```json
+"scripts": {
+    "dev": "pnpm --filter linear-dream dev",
+    "dev:astro": "pnpm --filter curved-chaos dev",
+    "build": "pnpm build:packages && pnpm build:apps",
+    "build:packages": "pnpm -r --filter ./packages/** build",
+    "build:apps": "pnpm -r --filter ./apps/** build",
+    "test:all": "pnpm -r test"
+},
+```
