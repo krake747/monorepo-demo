@@ -5,5 +5,9 @@
     "keywords": [],
     "author": "",
     "license": "ISC",
-    "packageManager": "pnpm@10.24.0"
+    "packageManager": "pnpm@10.24.0",
+    "scripts": {
+        "dev": "pnpm --filter linear-dream dev",
+        "dev:astro": "pnpm --filter curved-chaos dev"
+    }
 }
