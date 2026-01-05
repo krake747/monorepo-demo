@@ -1,16 +1,32 @@
 {
     "name": "ui",
     "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
+    "description": "React UI components library",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "build": "tsc",
+        "test": "vitest"
     },
-    "keywords": [],
+    "keywords": [
+        "react",
+        "ui",
+        "components"
+    ],
     "author": "",
     "license": "ISC",
+    "type": "module",
     "packageManager": "pnpm@10.24.0",
+    "peerDependencies": {
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0"
+    },
     "devDependencies": {
+        "@types/react": "^18.0.0",
+        "@types/react-dom": "^18.0.0",
         "typescript": "~5.9.3",
         "vitest": "^4.0.15"
     }
