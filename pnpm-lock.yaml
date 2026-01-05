@@ -93,6 +93,15 @@ importers:
         specifier: ^4.0.15
         version: 4.0.15(@types/node@25.0.3)(esbuild@0.25.12)
 
+  packages/ui:
+    devDependencies:
+      typescript:
+        specifier: ~5.9.3
+        version: 5.9.3
+      vitest:
+        specifier: ^4.0.15
+        version: 4.0.15(@types/node@25.0.3)(esbuild@0.25.12)
+
 packages:
 
   '@astrojs/compiler@2.13.0':
