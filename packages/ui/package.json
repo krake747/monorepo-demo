@@ -1,5 +1,5 @@
 {
-    "name": "ui",
+    "name": "@mono/ui",
     "version": "1.0.0",
     "description": "React UI components library",
     "main": "dist/index.js",

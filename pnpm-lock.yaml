@@ -37,6 +37,9 @@ importers:
       '@mono/core':
         specifier: workspace:*
         version: link:../../packages/core
+      '@mono/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       react:
         specifier: ^19.2.3
         version: 19.2.3
