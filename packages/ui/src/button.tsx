@@ -4,7 +4,7 @@ export function Button({ children, onClick, ...props }: React.ComponentProps<"bu
     return (
         <button
             onClick={onClick}
-            className="ui:flex ui:items-center ui:justify-center ui:px-4 ui:py-2 ui:bg-blue-500 ui:text-white ui:rounded-md ui:hover:bg-blue-600 ui:transition-colors"
+            className="ui:flex ui:items-center ui:justify-center ui:px-4 ui:py-2 ui:bg-red-500 ui:text-white ui:rounded-md ui:hover:bg-blue-600 ui:transition-colors"
             {...props}
         >
             {children}
