@@ -2,13 +2,23 @@
     "name": "@mono/ui",
     "version": "1.0.0",
     "description": "React UI components library",
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
+    "type": "module",
+    "packageManager": "pnpm@10.24.0",
+    "exports": {
+        ".": "./dist/index.js",
+        "./styles.css": "./dist/index.css",
+        "./*": "./dist/*.js"
+    },
     "files": [
         "dist"
     ],
     "scripts": {
-        "build": "tsc",
+        "build": "pnpm run build:styles && pnpm run build:components",
+        "build:styles": "tailwindcss -i ./src/styles.css -o ./dist/index.css",
+        "build:components": "tsc",
+        "dev": "tsc --watch",
+        "dev:styles": "tailwindcss -i ./src/styles.css -o ./dist/index.css --watch",
+        "dev:components": "tsc --watch",
         "lint:ts": "tsc --noEmit",
         "test": "vitest"
     },
@@ -19,8 +29,6 @@
     ],
     "author": "",
     "license": "ISC",
-    "type": "module",
-    "packageManager": "pnpm@10.24.0",
     "peerDependencies": {
         "react": "^18.0.0",
         "react-dom": "^18.0.0"
@@ -29,6 +37,11 @@
         "@types/react": "^18.0.0",
         "@types/react-dom": "^18.0.0",
         "typescript": "~5.9.3",
-        "vitest": "^4.0.15"
+        "vitest": "^4.0.15",
+        "tailwindcss": "^4.1.5",
+        "@tailwindcss/cli": "^4.1.5",
+        "@tailwindcss/postcss": "^4.1.5",
+        "autoprefixer": "^10.4.20",
+        "postcss": "^8.5.3"
     }
 }
