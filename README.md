@@ -101,5 +101,11 @@ build the packages and apps, and run tests across the entire monorepo.
 [Turborepo](https://turborepo.com/)
 
 ```bash
-pnpm dlx create-turbo@latest
+pnpm dlx create-turbo@latest // Creates a new turborepo
+```
+
+We need to run 
+
+```bash
+pnpm add turbo --save-dev --workspace-root
 ```

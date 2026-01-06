@@ -8,8 +8,9 @@
     "description": "Core package for monorepo",
     "main": "dist/index.js",
     "scripts": {
-        "test": "vitest run",
-        "build": "rm -rf dist && tsc"
+        "build": "tsc",
+        "lint:ts": "tsc --noEmit",
+        "test": "vitest run"
     },
     "license": "ISC",
     "packageManager": "pnpm@10.24.0",

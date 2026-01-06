@@ -5,7 +5,7 @@
     "keywords": [],
     "author": "",
     "license": "ISC",
-    "packageManager": "pnpm@10.24.0",
+    "packageManager": "pnpm@10.27.0",
     "scripts": {
         "dev": "pnpm --filter linear-dream dev",
         "dev:astro": "pnpm --filter curved-chaos dev",
@@ -15,6 +15,9 @@
         "dev:all": "pnpm -r --parallel dev",
         "build:all": "pnpm -r --parallel build",
         "test:all": "pnpm -r test"
+    },
+    "devDependencies": {
+        "turbo": "^2.7.3"
     },
     "pnpm": {
         "overrides": {
