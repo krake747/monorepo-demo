@@ -16,7 +16,7 @@
         "build": "pnpm run build:styles && pnpm run build:components",
         "build:styles": "tailwindcss -i ./src/styles.css -o ./dist/index.css",
         "build:components": "tsc",
-        "dev": "tsc --watch",
+        "dev": "tsc --watch & tailwindcss -i ./src/styles.css -o ./dist/index.css --watch",
         "dev:styles": "tailwindcss -i ./src/styles.css -o ./dist/index.css --watch",
         "dev:components": "tsc --watch",
         "lint:ts": "tsc --noEmit",
