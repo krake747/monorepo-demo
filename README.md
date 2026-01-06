@@ -85,3 +85,21 @@ We now update the root `package.json` with extra scripts.
     "test:all": "pnpm -r test"
 },
 ```
+
+We do the same with a `package/ui` package that holds shared React components.
+
+React requires some extra setup with `tsconfig.json` and dependencies to make React components.
+
+Finally we add `@mono/ui` to both apps and use a shared button component in each app.
+
+With this setup, you have a basic monorepo structure using pnpm workspaces, with shared packages
+and applications that can leverage those packages. We can run development servers for each app,
+build the packages and apps, and run tests across the entire monorepo.
+
+## Turborepo
+
+[Turborepo](https://turborepo.com/)
+
+```bash
+pnpm dlx create-turbo@latest
+```
